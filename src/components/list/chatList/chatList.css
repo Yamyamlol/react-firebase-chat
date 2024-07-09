@@ -1,6 +1,23 @@
 .chatList {
   flex: 1;
-  overflow: scroll;
+  overflow-y: auto; /* Enable vertical scrolling */
+  scrollbar-width: thin; /* Thin scrollbar */
+  scrollbar-color: black; /* Black color for the scrollbar */
+
+  /* Hide scrollbar when not in use */
+  &::-webkit-scrollbar {
+    width: 6px; /* Set scrollbar width */
+  }
+
+  &::-webkit-scrollbar-track {
+    background: transparent; /* Transparent track */
+  }
+
+  &::-webkit-scrollbar-thumb {
+    background-color: black; /* Black scrollbar thumb */
+    border-radius: 10px; /* Rounded corners */
+  }
+
   .search {
     display: flex;
     align-items: center;

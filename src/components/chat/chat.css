@@ -1,3 +1,5 @@
+/* CSS for Chat Application */
+
 .chat {
   flex: 2;
   border-left: 1px solid #dddddd35;
@@ -57,10 +59,34 @@
   .center {
     padding: 20px;
     flex: 1;
-    overflow: scroll;
     display: flex;
     flex-direction: column;
     gap: 20px;
+    overflow-y: auto; /* Enable vertical scrolling */
+    scrollbar-width: thin; /* Thin scrollbar */
+    scrollbar-color: black; /* Black color for the scrollbar */
+
+    /* Hide scrollbar when not in use */
+    &::-webkit-scrollbar {
+      width: 6px; /* Set initial scrollbar width */
+      background: transparent; /* Transparent background */
+      transition: width 0.3s ease; /* Smooth width transition */
+    }
+
+    &::-webkit-scrollbar-track {
+      background: transparent; /* Transparent track */
+    }
+
+    &::-webkit-scrollbar-thumb {
+      background-color: black; /* Black scrollbar thumb */
+      border-radius: 10px; /* Rounded corners */
+    }
+
+    &:hover {
+      &::-webkit-scrollbar {
+        width: 6px; /* Adjust width on hover */
+      }
+    }
 
     .message {
       max-width: 70%;
@@ -83,6 +109,7 @@
         border-radius: 50%;
         object-fit: cover;
       }
+      
       .texts {
         flex: 1;
         display: flex;
