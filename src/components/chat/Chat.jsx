@@ -58,7 +58,7 @@ const Chat = () => {
   };
 
   const handleSend = async () => {
-    if (text === "") return;
+    if (text === "" && !img.file) return;
 
     let imgUrl = null;
 
@@ -100,7 +100,7 @@ const Chat = () => {
         }
       });
     } catch (err) {
-      console.log(err);
+      console.error("Error sending message: ", err);
     } finally {
       setImg({
         file: null,
