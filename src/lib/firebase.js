@@ -4,7 +4,7 @@ import { getFirestore } from "firebase/firestore";
 import { getStorage } from "firebase/storage";
 
 const firebaseConfig = {
-  apiKey: "AIzaSyAPSxybvWm1NMlaHJla2z2zQa-0seAy-SU",
+  apiKey: "get your own api key lol it was just for college project so i hard coded this",
   authDomain: "finalmessenger-d71ce.firebaseapp.com",
   projectId: "finalmessenger-d71ce",
   storageBucket: "finalmessenger-d71ce.appspot.com",
